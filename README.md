@@ -13,4 +13,4 @@ Użytkownik poprzez pole tekstowe wprowadza tytuł filmu lub słowo kluczowe, a 
 - html
 - css
 - javascript
-- 
+- Open Movie Database
