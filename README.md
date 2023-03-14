@@ -2,7 +2,7 @@
 Wyszukiwarka filmów
 
 # Omówienie projektu
-Użytkownik poprzez pole tekstowe wprowadza tytuł filmu lub słowo kluczowe, a strona wyświetli wyniki wyszukiwania. Strona będzie posiadała proste GUI i bazę klikudziesięciu filmów
+Użytkownik poprzez pole tekstowe wprowadza tytuł filmu lub słowo kluczowe, a strona wyświetli wyniki wyszukiwania. Strona będzie posiadała proste GUI, a dane na temat filmów będzie pobierała z OMDb API
 
 # Planowane fukcjonalności
 - Wyświetlenie wyszukiwanych filmów
