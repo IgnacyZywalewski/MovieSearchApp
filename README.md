@@ -4,7 +4,7 @@ Wyszukiwarka filmów
 # Omówienie projektu
 Użytkownik poprzez pole tekstowe wprowadza tytuł filmu lub słowo kluczowe, a strona wyświetli wyniki wyszukiwania. Strona będzie posiadała proste GUI, a dane na temat filmów będzie pobierała z OMDb API
 
-# Planowane fukcjonalności
+# Planowane funkcjonalności
 - Wyświetlenie wyszukiwanych filmów
 - Tworzenie listy ulubionych filmów, filmów do obejrzenia
 - Wyświetlenie, krótkiej informacji na temat wybranego filmu

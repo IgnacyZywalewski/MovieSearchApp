@@ -1,0 +1,23 @@
+Ignacy Żywalewski
+
+
+##Raport 2
+
+Dodane funkcjonalności:
+- wyszukiwanie filmów wpisanych przez używtkownika
+
+Nieprzewidziane problemy:
+- niedziałający klucz
+
+Do ukończenia:
+- GUI
+- Tworzenie listy ulubionych filmów
+
+
+---------------------
+Archiwum aktualizacji
+
+#15.04.2023
+- Uzyskanie klucza api do pobierania informacji o filmach 
+- Budowa strony
+- Funckja getMovie(): wysyła request do OMD, uzyskuje potrzebne dane i umieszcza je na stronie 
