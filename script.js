@@ -1,17 +1,16 @@
-let movieNameRef = document.getElementById("movie-name");
 let searchBtn = document.getElementById("search-btn");
 let result = document.getElementById("result");
-
+let key = 'e9f906b1';
 
 let getMovie = () => {
-    let movieName = movieNameRef.value;
-    let url = `http://www.omdbapi.com/?apikey=${key}&t=${movieName}`;
+
+    let movieName = document.getElementById("movie-name").value;
+    let url = `https://www.omdbapi.com/?apikey=${key}&t=${movieName}`;
 
     if (movieName.length <= 0) {
         result.innerHTML = '<h3 class="msg">Please enter movie name </h3>';
     }
 
-    
     else {
         fetch(url).then((resp) => resp.json()).then((data) => {
             if (data.Response == "True") {
@@ -22,7 +21,7 @@ let getMovie = () => {
                             <h2>${data.Title}</h2>
                             <div class="rating">
                                 <img src="star-icon.svg">
-                                <h4>${data.imbdRating}</h4>
+                                <h4>${data.imdbRating}</h4>
                             </div>
                             <div class="details">
                                 <span>${data.Rated}</span>
@@ -52,5 +51,6 @@ let getMovie = () => {
     }
 }
 
+
 searchBtn.addEventListener("click", getMovie);
-window.addEventListener("load", getMovie);
+//window.addEventListener("load", getMovie);
