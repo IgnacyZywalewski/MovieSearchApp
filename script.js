@@ -3,7 +3,7 @@ let result = document.getElementById("result");
 let key = 'e9f906b1';
 
 let getMovie = () => {
-
+    
     let movieName = document.getElementById("movie-name").value;
     let url = `https://www.omdbapi.com/?apikey=${key}&t=${movieName}`;
 
