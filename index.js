@@ -1,11 +1,11 @@
+let movieNameRef = document.getElementById("movie-name");
 let searchBtn = document.getElementById("search-btn");
 let result = document.getElementById("result");
-let key = 'e9f906b1';
 
 let getMovie = () => {
     
-    let movieName = document.getElementById("movie-name").value;
-    let url = `https://www.omdbapi.com/?apikey=${key}&t=${movieName}`;
+    let movieName = movieNameRef.value;
+    let url = `http://www.omdbapi.com/?t=${movieName}&apikey=${key}`;
 
     if (movieName.length <= 0) {
         result.innerHTML = '<h3 class="msg">Please enter movie name </h3>';
@@ -28,15 +28,16 @@ let getMovie = () => {
                                 <span>${data.Year}</span>
                                 <span>${data.Runtime}</span>
                             </div>
-                            <div class="genere">
-                                <div>${data.Genere.split(", ").join("</div><div>")}</div>
+                            <div class="genre">
+                                <div>${data.Genre.split(",").join("</div><div>")}</div>
                             </div>
                         </div>
                     </div>
                     <h3>Plot:</h3>
-                    <p>${data.Plot}<p>
+                    <p>${data.Plot}</p>
                     <h3>Cast:</h3>
-                    <p>${data.Actors}</p>`;
+                    <p>${data.Actors}</p>
+                    `;
             }
 
             else {
@@ -45,12 +46,11 @@ let getMovie = () => {
         })
 
             .catch(() => {
-                result.innerHTML = `<h3 class="msg" Error Occured</h3>`;
+                result.innerHTML = `<h3 class="msg"> Error Occured</h3>`;
             });
 
     }
-}
-
+};
 
 searchBtn.addEventListener("click", getMovie);
-//window.addEventListener("load", getMovie);
+window.addEventListener("load", getMovie);

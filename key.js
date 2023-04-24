@@ -1,1 +1,1 @@
-let key = 'e9f906b1';
+key = 'e9f906b1';
