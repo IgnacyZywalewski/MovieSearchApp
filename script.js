@@ -1,5 +1,6 @@
 let movieNameRef = document.getElementById("movie-name");
 let yearRef = document.getElementById("year");
+let typeRef = document.getElementById("type");
 let searchBtn = document.getElementById("search-btn");
 let result = document.getElementById("result");
 
@@ -8,7 +9,8 @@ let getMovie = () => {
     
     let movieName = movieNameRef.value;
     let year = yearRef.value;
-    let url = `http://www.omdbapi.com/?apikey=${key}&t=${movieName}&y=${year}`;
+    let type = typeRef.value;
+    let url = `http://www.omdbapi.com/?apikey=${key}&t=${movieName}&y=${year}&type=${type}`;
 
     if (movieName.length <= 0) {
         result.innerHTML = '<h3 class="msg">Please enter movie name </h3>';

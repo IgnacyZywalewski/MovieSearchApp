@@ -30,6 +30,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .search-container input {
@@ -41,6 +42,8 @@ body {
     outline: none;
     border-radius: 0.3em;
     padding: 0.7em;
+    width: calc(33.33% - 0.67em);
+    margin-right: 0.67em;
 }
 
 .search-container input :focus {
@@ -56,15 +59,24 @@ body {
     font-size: 0.9em;
     outline: none;
     border-radius: 0.3em;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 1em;
 }
+
 
 #movie-name {
     flex-grow: 1;
     margin-right: 1em;
+    width: 10%;
 }
 
 #year {
     width: 23%;
+}
+
+#type {
+    width: 10%;
 }
 
 #result {
