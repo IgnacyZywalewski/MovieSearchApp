@@ -28,17 +28,19 @@ body {
 
 #movie-name {
     width: auto;
-    max-width: 40%;
+    max-width: 45%;
+    margin-right: 0.67em;
 }
 
 #year {
     width: auto;
     max-width: 25%;
+    margin-right: 0.67em;
 }
 
 #type {
     width: auto;
-    max-width: 30%;
+    max-width: 25%;
 }
 
 .search-container {
@@ -58,7 +60,6 @@ body {
     outline: none;
     border-radius: 0.3em;
     flex: 1;
-    margin-right: 0.67em;
 }
 
 .button-container {
@@ -73,14 +74,13 @@ body {
     border: none;
     cursor: pointer;
     padding: 0.7em 1.5em;
-    margin-left: 1em;
     font-size: 0.9em;
     outline: none;
     border-radius: 0.3em;
     width: 100%;
 }
 
-/* wynik wyszukiwania*/
+/* wyniki wyszukiwania*/
 
 #result {
     color: #fff;
@@ -109,7 +109,7 @@ body {
     font-size: 14px;
 }
 
-/*teraz nie potrzebne*/
+/* pojedyńczy film wyszukiwania*/
 
 .info {
     position: relative;
@@ -121,7 +121,6 @@ body {
 .poster {
     width: 100%;
 }
-
 
 h2 {
     text-align: center;

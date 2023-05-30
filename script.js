@@ -4,9 +4,9 @@ const yearRef = document.getElementById('year');
 const typeRef = document.getElementById('type');
 const searchButton = document.getElementById('search-btn');
 const resultDiv = document.getElementById('result');
-const page = 1;
+let page = 1;
 
-searchButton.addEventListener('click', (event) => {
+let searchResult = (event) => {
     event.preventDefault();
 
     const movieName = movieNameRef.value;
@@ -39,7 +39,6 @@ searchButton.addEventListener('click', (event) => {
                         event.preventDefault();
                         getMovie(movie.imdbID);
                     });
-
                     title.classList.add('movie-title');
                     movieDiv.appendChild(title);
 
@@ -66,11 +65,11 @@ searchButton.addEventListener('click', (event) => {
         .catch(error => {
             console.log('Error:', error);
         });
-});
-
+};
 
 
 let getMovie = (imdbID) => {
+
     let urlMovie = `http://www.omdbapi.com/?apikey=${apiKey}&i=${imdbID}`;
 
     fetch(urlMovie)
@@ -108,5 +107,6 @@ let getMovie = (imdbID) => {
         .catch(() => {
             resultDiv.innerHTML = `<h3 class="msg"> Error Occured</h3>`;
         });
-}
-    ;  
+};
+
+searchButton.addEventListener('click', searchResult);
