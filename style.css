@@ -30,6 +30,7 @@ body {
     width: auto;
     max-width: 100%;
 }
+
 #type {
     width: auto;
     max-width: 70%;
@@ -41,6 +42,9 @@ body {
     margin-right: 10px;
 }
 
+input::placeholder {
+    color: #a0a0a0;
+}
 
 .movie-name-container,
 .search-container {
