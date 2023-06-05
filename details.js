@@ -6,17 +6,17 @@ const urlParams = new URLSearchParams(window.location.search);
 const imdbID = urlParams.get('imdbID');
 
 searchButton.addEventListener('click', () => {
-  const movieName = document.getElementById('movie-name').value;
-  const year = document.getElementById('year').value;
-  const type = document.getElementById('type').value;
+    const movieName = document.getElementById('movie-name').value;
+    const year = document.getElementById('year').value;
+    const type = document.getElementById('type').value;
 
-  const searchParams = new URLSearchParams();
-  searchParams.append('movieName', movieName);
-  searchParams.append('year', year);
-  searchParams.append('type', type);
-  const url = `results.html?${searchParams.toString()}`;
+    const searchParams = new URLSearchParams();
+    searchParams.append('movieName', movieName);
+    searchParams.append('year', year);
+    searchParams.append('type', type);
+    const url = `results.html?${searchParams.toString()}`;
 
-  window.location.href = url;
+    window.location.href = url;
 });
 
 function getMovie(imdbID) {
