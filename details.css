@@ -9,8 +9,83 @@
 
 body {
     height: 100vh;
-    background:rgb(26, 26, 26);
+    background: rgb(27, 26, 26);
 }
+
+/*pasek wyszukiwania*/
+
+.navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    z-index: 9999;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.home-link {
+    color: white;
+    margin-right: 50px;
+    text-decoration: none;
+}
+
+.home-link:hover {
+    text-decoration: underline;
+    transform: translateY(-2px);
+    cursor: pointer;
+}
+
+.movie-name,
+.year,
+.type {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.container button {
+    padding: 5px 10px;
+    background-color: #ffb92a;
+    color:  black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#movie-name {
+    flex: 1;
+    max-width: 250px;
+}
+
+#year {
+    flex: 1;
+    max-width: 125px;
+}
+
+.type {
+    flex: 1;
+    max-width: 265px;
+}
+
+input::placeholder {
+    color: #a0a0a0;
+}
+
+
+/*detale filmu*/
 
 .result {
     font-size: 16px;

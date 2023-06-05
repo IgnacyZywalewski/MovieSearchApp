@@ -8,11 +8,23 @@
 </head>
 
 <body>
+    <div class="navbar">
+        <div class="container">
+            <a href="index.html" class="home-link">Strona główna</a>
+            <input type="text" class="movie-name" id="movie-name" placeholder="Enter movie name here... (required)">
+            <input type="number" class="year" id="year" placeholder="Year (optional)">
+            <input type="text" class="type" id="type" placeholder="Type (movie, series, game) optional">
+            <button class="search-btn" id="search-btn">Search</button>
+        </div>
+    </div>
+
+
     <div class="result" id="result"></div>
     <div id="button-container">
         <button id="back-btn">Back</button>
         <button id="next-btn">Next</button>
     </div>
+
     <script src="results.js"></script>
 </body>
 

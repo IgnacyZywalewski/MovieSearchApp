@@ -9,7 +9,8 @@
 
 body {
     height: 100vh;
-    background: rgb(26, 26, 26);;
+    background: rgb(26, 26, 26);
+    /*background: linear-gradient(#1c1917 50%, #ffb92a 50%);*/
 }
 
 .container {

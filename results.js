@@ -4,6 +4,15 @@ const backButton = document.getElementById('back-btn');
 const nextButton = document.getElementById('next-btn');
 let page = 1;
 
+const searchAndDisplayResults = () => {
+    const movieName = document.getElementById('movie-name').value;
+    const year = document.getElementById('year').value;
+    const type = document.getElementById('type').value;
+    page = 1;
+
+    searchResult(movieName, year, type);
+};
+
 let searchResult = (movieName, year, type) => {
     let url = `https://www.omdbapi.com/?apikey=${apiKey}&s=${encodeURIComponent(movieName)}&y=${encodeURIComponent(year)}&type=${encodeURIComponent(type)}&page=${page}`;
 
@@ -98,4 +107,10 @@ const onPageLoad = () => {
         window.location.href = nextUrl;
     });
 };
+
+const searchButton = document.getElementById('search-btn');
+searchButton.addEventListener('click', () => {
+    searchAndDisplayResults();
+});
+
 window.addEventListener('load', onPageLoad);
