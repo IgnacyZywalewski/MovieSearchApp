@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detale</title>
-    <link rel="stylesheet" href="details.css">
+    <title>Watchlist</title>
+    <link rel="stylesheet" href="watchlist.css">
 </head>
 
 <body>
@@ -15,25 +15,20 @@
             <div>
                 <a class="home-link" href="index.html">Home Page</a>
             </div>
-            <div>
-                <a class="watchlist-link" href="watchlist.html">Watchlist</a>
-            </div>
 
             <input type="text" class="movie-name" id="movie-name" placeholder="Enter key words here... (required)">
             <input type="number" class="year" id="year" placeholder="Year (optional)">
             <input type="text" class="type" id="type" placeholder="Type (movie, series, game) optional">
 
             <button class="search-btn" id="search-btn">Search</button>
-
-            <button class="add-to-watchlist" id="add-to-watchlist">Add to Watchlist</button>
-            <button class="remove-from-watchlist" id="remove-from-watchlist" style="display: none;">Remove from
-                Watchlist</button>
+            <button class="clear-watchlist" id="clear-watchlist">Clear Watchlist</button>
         </div>
     </div>
 
-    <div class="result" id="result"></div>
+    <div class="watchlist-container">
+        <table id="watchlist-table"></table>
+    </div>
 
-    <script src="details.js"></script>
     <script src="watchlist.js"></script>
 </body>
 

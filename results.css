@@ -33,13 +33,15 @@ body {
     max-width: 100%;
 }
 
-.home-link {
+.home-link,
+.watchlist-link {
     color: white;
     margin-right: 50px;
     text-decoration: none;
 }
 
-.home-link:hover {
+.home-link:hover,
+.watchlist-link:hover {
     text-decoration: underline;
     transform: translateY(-2px);
     cursor: pointer;
@@ -56,13 +58,17 @@ body {
     margin-right: 10px;
 }
 
-.container button {
+.search-btn {
     padding: 5px 10px;
     background-color: #ffb92a;
     color: black;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+}
+
+.search-btn:hover{
+    background-color: #fda900;
 }
 
 #movie-name {

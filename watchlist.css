@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: rgb(26, 26, 26);
+}
+
+/* pasek */
+.navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    z-index: 9999;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.home-link {
+    color: white;
+    margin-right: 50px;
+    text-decoration: none;
+}
+
+.home-link:hover {
+    text-decoration: underline;
+    transform: translateY(-2px);
+    cursor: pointer;
+}
+
+.movie-name,
+.year,
+.type {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+#movie-name {
+    flex: 1;
+    max-width: 250px;
+}
+
+#year {
+    flex: 1;
+    max-width: 125px;
+}
+
+.type {
+    flex: 1;
+    max-width: 265px;
+}
+
+input::placeholder {
+    color: #a0a0a0;
+}
+
+.container button {
+    padding: 5px 10px;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-btn {
+    background-color: #ffb92a;
+}
+
+.search-btn:hover {
+    background-color: #fda900;
+}
+
+.add-to-watchlist,
+.clear-watchlist {
+    display: inline-block;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+}
+
+.clear-watchlist {
+    background-color: #dc3545;
+}
+
+.clear-watchlist:hover {
+    background-color: #c82333;
+}
+
+
+/* tabela */
+.watchlist-container {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: fit-content;
+    padding: 10px 30px;
+    margin: 0 auto;
+    background-color: #1e293b;
+    border-radius: 10px;
+}
+
+
+img {
+    max-height: 200px;
+    max-width: 120px;
+    margin-right: 20px;
+}
+
+#remove-button {
+    padding: 5px 10px;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #dc3545;
+    margin-left: auto;
+}
+
+#remove-button:hover {
+    background-color: #c82333;
+}

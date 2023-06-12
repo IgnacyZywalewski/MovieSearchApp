@@ -12,7 +12,7 @@ body {
     background: rgb(26, 26, 26);
 }
 
-/*pasek wyszukiwania*/
+/* pasek wyszukiwania */
 
 .navbar {
     position: sticky;
@@ -33,13 +33,15 @@ body {
     max-width: 100%;
 }
 
-.home-link {
+.home-link,
+.watchlist-link {
     color: white;
     margin-right: 50px;
     text-decoration: none;
 }
 
-.home-link:hover {
+.home-link:hover, 
+.watchlist-link:hover {
     text-decoration: underline;
     transform: translateY(-2px);
     cursor: pointer;
@@ -54,15 +56,6 @@ body {
     padding: 5px;
     border-radius: 4px;
     margin-right: 10px;
-}
-
-.container button {
-    padding: 5px 10px;
-    background-color: #ffb92a;
-    color: black;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
 }
 
 #movie-name {
@@ -85,7 +78,49 @@ input::placeholder {
 }
 
 
-/*detale filmu*/
+
+/* style dla przycisków */
+
+.container button {
+    padding: 5px 10px;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-btn,
+.add-to-watchlist{
+    background-color: #ffb92a;
+}
+
+.search-btn:hover,
+.add-to-watchlist:hover {
+    background-color: #fda900;
+}
+
+.add-to-watchlist,
+.remove-from-watchlist {
+    display: inline-block;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+}
+
+.remove-from-watchlist {
+    background-color: #dc3545;
+}
+
+.remove-from-watchlist:hover {
+    background-color: #c82333;
+}
+
+#watchlist-buttons {
+    margin-top: 20px;
+}
+
+
+/* detale filmu */
 
 .result {
     font-size: 16px;
@@ -93,7 +128,7 @@ input::placeholder {
     max-width: 40em;
     padding: 3em 1.8em;
     background-color: #1e293b;
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

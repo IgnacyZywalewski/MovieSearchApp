@@ -4,6 +4,7 @@ const backButton = document.getElementById('back-btn');
 const nextButton = document.getElementById('next-btn');
 let page = 1;
 
+//działanie paska wyszukiwań
 const searchAndDisplayResults = () => {
     const movieName = document.getElementById('movie-name').value;
     const year = document.getElementById('year').value;
@@ -13,6 +14,7 @@ const searchAndDisplayResults = () => {
     searchResult(movieName, year, type);
 };
 
+//wyświetlanie wyników wyszukiwania
 let searchResult = (movieName, year, type) => {
     let url = `https://www.omdbapi.com/?apikey=${apiKey}&s=${encodeURIComponent(movieName)}&y=${encodeURIComponent(year)}&type=${encodeURIComponent(type)}&page=${page}`;
 
@@ -68,11 +70,13 @@ let searchResult = (movieName, year, type) => {
         });
 };
 
+//link do strony z detalami
 const goToDetailsPage = (imdbID) => {
     const detailsUrl = `details.html?imdbID=${encodeURIComponent(imdbID)}`;
     window.location.href = detailsUrl;
 };
 
+//działanie przycisków back i next
 const urlParams = new URLSearchParams(window.location.search);
 const movieName = urlParams.get('movieName');
 const year = urlParams.get('year');
@@ -108,6 +112,7 @@ const onPageLoad = () => {
     });
 };
 
+//działanie przycisku search
 const searchButton = document.getElementById('search-btn');
 searchButton.addEventListener('click', () => {
     searchAndDisplayResults();
