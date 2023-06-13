@@ -40,7 +40,7 @@ body {
     text-decoration: none;
 }
 
-.home-link:hover, 
+.home-link:hover,
 .watchlist-link:hover {
     text-decoration: underline;
     transform: translateY(-2px);
@@ -90,7 +90,7 @@ input::placeholder {
 }
 
 .search-btn,
-.add-to-watchlist{
+.add-to-watchlist {
     background-color: #ffb92a;
 }
 
@@ -128,10 +128,8 @@ input::placeholder {
     max-width: 40em;
     padding: 3em 1.8em;
     background-color: #1e293b;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 25%;
     border-radius: 0.6em;
     box-shadow: 1.2em 2em 3em rgba(0, 0, 0, 0.2);
     color: white;
