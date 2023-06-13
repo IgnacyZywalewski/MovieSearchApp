@@ -120,12 +120,23 @@ input::placeholder {
     border-radius: 10px;
 }
 
+.name-text {
+    display: inline-block;
+}
+
+.name-text:hover{
+    text-decoration: underline;
+    transform: translateY(-2px);
+    cursor: pointer;
+}
 
 img {
     max-height: 200px;
     max-width: 120px;
     margin-right: 20px;
+    margin-bottom: 10px;
 }
+
 
 #remove-button {
     padding: 5px 10px;

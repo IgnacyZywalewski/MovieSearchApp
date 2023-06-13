@@ -12,19 +12,20 @@ function renderWatchlist() {
         const nameCell = row.insertCell();
         const buttonCell = row.insertCell();
 
-        posterCell.classList.add('row-cell');
-        nameCell.classList.add('row-cell');
-        buttonCell.classList.add('row-cell');
-
         const posterImg = document.createElement('img');
         posterImg.src = item.poster;
         posterImg.alt = item.name;
         posterImg.alt = item.id;
         posterCell.appendChild(posterImg);
 
+
         const nameText = document.createTextNode(item.name);
-        nameCell.appendChild(nameText);
-        nameCell.addEventListener('click', () => {
+        const nameTextSpan = document.createElement('span');
+        nameTextSpan.classList.add('name-text');
+        nameTextSpan.appendChild(nameText);
+        nameCell.appendChild(nameTextSpan);
+
+        nameTextSpan.addEventListener('click', () => {
             window.location.href = `details.html?imdbID=${encodeURIComponent(item.id)}`;
         });
 

@@ -11,9 +11,7 @@ let searchResult = (event) => {
     const year = yearRef.value;
     const type = typeRef.value;
 
-    let url = `results.html?movieName=${encodeURIComponent(movieName)}&year=${encodeURIComponent(year)}&type=${encodeURIComponent(type)}`;
-
-    window.location.href = url;
+    window.location.href = `results.html?movieName=${encodeURIComponent(movieName)}&year=${encodeURIComponent(year)}&type=${encodeURIComponent(type)}`;
 };
 
 searchButton.addEventListener('click', searchResult);

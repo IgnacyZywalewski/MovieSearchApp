@@ -4,6 +4,7 @@ const backButton = document.getElementById('back-btn');
 const nextButton = document.getElementById('next-btn');
 let page = 1;
 
+
 //działanie paska wyszukiwań
 const searchAndDisplayResults = () => {
     const movieName = document.getElementById('movie-name').value;
@@ -24,6 +25,10 @@ let searchResult = (movieName, year, type) => {
             resultDiv.innerHTML = '';
 
             if (data.Response === 'True') {
+
+                const totalResultsValue = document.getElementById('total-results-value');
+                totalResultsValue.textContent = data.totalResults;
+
                 const moviesContainer = document.createElement('div');
                 moviesContainer.classList.add('movies-container');
 

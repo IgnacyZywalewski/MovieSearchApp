@@ -10,21 +10,19 @@
 <body>
     <div class="navbar">
         <div class="container">
-            <div>
-                <a class="home-link" href="index.html">Home Page</a>
-            </div>
-            <div>
-                <a class="watchlist-link" href="watchlist.html">Watchlist</a>
-            </div>
-            
+
+            <a class="home-link" href="index.html">Home Page</a>
+            <a class="watchlist-link" href="watchlist.html">Watchlist</a>
+
             <input type="text" class="movie-name" id="movie-name" placeholder="Enter key words here... (required)">
             <input type="number" class="year" id="year" placeholder="Year (optional)">
             <input type="text" class="type" id="type" placeholder="Type (movie, series, game) optional">
-            
+
             <button class="search-btn" id="search-btn">Search</button>
         </div>
     </div>
 
+    <p>Total results: <span id="total-results-value"></span></p>
 
     <div class="result" id="result"></div>
     <div id="button-container">

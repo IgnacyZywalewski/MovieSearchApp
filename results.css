@@ -90,6 +90,10 @@ input::placeholder {
     color: #a0a0a0;
 }
 
+p{
+    color:#fff;
+    font-size: medium;
+}
 
 /*wyniki wyszukiwania*/
 
