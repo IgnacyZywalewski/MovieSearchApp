@@ -3,7 +3,7 @@ const resultDiv = document.getElementById('result');
 const backButton = document.getElementById('back-btn');
 const nextButton = document.getElementById('next-btn');
 let page = 1;
-
+let totalResultsValue = document.getElementById('total-results-value');
 
 //działanie paska wyszukiwań
 const searchAndDisplayResults = () => {
@@ -26,8 +26,8 @@ let searchResult = (movieName, year, type) => {
 
             if (data.Response === 'True') {
 
-                const totalResultsValue = document.getElementById('total-results-value');
                 totalResultsValue.textContent = data.totalResults;
+                
 
                 const moviesContainer = document.createElement('div');
                 moviesContainer.classList.add('movies-container');
@@ -37,7 +37,12 @@ let searchResult = (movieName, year, type) => {
                     movieDiv.classList.add('movie-item');
 
                     const poster = document.createElement('img');
-                    poster.src = movie.Poster;
+                    if (movie.Poster === 'N/A') {
+                        poster.src = 'No-image-Placeholder.png';
+                    }
+                    else {
+                        poster.src = movie.Poster;
+                    }
                     poster.classList.add('movie-poster');
                     movieDiv.appendChild(poster);
 
@@ -52,10 +57,12 @@ let searchResult = (movieName, year, type) => {
 
                     const year = document.createElement('p');
                     year.textContent = `Year: ${movie.Year}`;
+                    year.classList.add('movie-year');
                     movieDiv.appendChild(year);
 
                     const type = document.createElement('p');
                     type.textContent = `Type: ${movie.Type}`;
+                    type.classList.add('movie-type');
                     movieDiv.appendChild(type);
 
                     moviesContainer.appendChild(movieDiv);
@@ -108,13 +115,19 @@ const onPageLoad = () => {
         });
     }
 
-    nextButton.addEventListener('click', () => {
-        const nextPage = page + 1;
-        const nextUrl = `results.html?movieName=${encodeURIComponent(movieName)}&year=${encodeURIComponent(
-            year
-        )}&type=${encodeURIComponent(type)}&page=${nextPage}`;
-        window.location.href = nextUrl;
-    });
+    if (currentPage + 1 > Math.ceil(totalResultsValue / 10)) {
+        nextButton.disabled = true;
+    }
+    else {
+        nextButton.addEventListener('click', () => {
+            const nextPage = page + 1;
+            const nextUrl = `results.html?movieName=${encodeURIComponent(movieName)}&year=${encodeURIComponent(
+                year
+            )}&type=${encodeURIComponent(type)}&page=${nextPage}`;
+            window.location.href = nextUrl;
+        });
+    }
+
 };
 
 //działanie przycisku search
